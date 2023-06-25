@@ -1,0 +1,150 @@
+.navbar {
+  position: relative;
+  width: 100%;
+  /* border: 2px solid red; */
+  padding: 1rem 0;
+  z-index: 15;
+}
+
+.navbar-content {
+  padding: var(--mainPadding);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-logo-img {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  box-shadow: 10px 2px 10px white;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.nav-link {
+  font-size: 2rem;
+  position: relative;
+}
+
+.nav-link:hover {
+  text-shadow: 1px 1px 1px var(--black), 2px 3px 15px var(--black);
+}
+
+.white-link-item::after {
+  content: attr(data-color);
+  position: absolute;
+  height: 2px;
+  background: var(--white);
+  width: 0%;
+  bottom: -0.5rem;
+  left: 0;
+  animation: growline 1s forwards;
+}
+
+.dark-blue-link-item::after {
+  content: attr(data-color);
+  position: absolute;
+  height: 2px;
+  background: var(--darkblue);
+  width: 0%;
+  bottom: -0.5rem;
+  left: 0;
+  animation: growline 1s forwards;
+}
+
+@keyframes growline {
+  100% {
+    width: 100%;
+  }
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.burger-div {
+  position: relative;
+  transition: 0.3s ease;
+}
+
+.burger {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+
+.burger:hover .rect {
+  transform-origin: center;
+  transition: y 0.3s ease, transform 0.3s 0.4s ease, opacity 0.3s 0.5s ease;
+}
+
+.close-menu .rect {
+  transform-origin: center;
+  transition: y 0.3s 0.4s ease, transform 0.3s ease, opacity 0.3s 0.3s ease;
+}
+
+.rect {
+  fill: var(--secondarycolor);
+}
+
+.close-menu :is(.rect1, .rect3) {
+  y: 15;
+}
+
+.close-menu .rect1 {
+  transform: rotate(45deg) translateY(0.4rem);
+}
+
+.close-menu .rect3 {
+  transform: rotate(-45deg) translateY(-0.4rem);
+}
+
+.close-menu .rect2 {
+  opacity: 0;
+}
+
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  padding: 1.5rem;
+  transition: 0.5s ease;
+  border-radius: 0.5rem;
+  position: absolute;
+  /* transform: scale(1); */
+  right: 2rem;
+}
+
+.hide-mobile-menu {
+  /* opacity: 0; */
+  transform: scale(0);
+}
+
+.mobile-item {
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 950px) {
+}
+
+@media screen and (max-width: 475px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: block;
+  }
+}

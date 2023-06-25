@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --mainPadding: 0 12.5rem;
+  --mainMarginLeft: 12.5rem;
+  --white: white;
+  --black: #4d4d4d;
+  --darkblue: #404e6c;
+  --gray: #afb4be;
+  --primaryFont: "Roboto", sans-serif;
+  /* --darkgray: rgb(61, 59, 59); */
+}
+
+/*color picker colors*/
+/* --textGray:#AFB4BE --darkBlue:#404E6C --textblack:#4D4D4D  */
+
+html {
+  font-size: 62.5%;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+p {
+  font-size: 2.3rem;
+  line-height: 2rem;
+  /* padding: 3rem 3rem; */
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+p {
+  font-size: 1.5rem;
+}
+
+h1 {
+  font-size: 20rem;
+  line-height: 14rem;
+}
+
+h2 {
+  font-size: 10rem;
+}
+
+h3 {
+  font-size: 5.5rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+  line-height: 2.2rem;
+}
+
+h5 {
+  font-size: 2.2rem;
+}
+
+.text-white {
+  color: var(--white);
+}
+
+.text-black {
+  color: var(--black);
+}
+
+.text-darkblue {
+  color: var(--darkblue);
+}
+
+.text-gray {
+  color: var(--gray);
+}
+
+/* .text-darkgray {
+  color: var(--darkblue);
+} */
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.faded {
+  opacity: 80%;
+}
+
+.white-bg {
+  background: var(--white);
+}
+
+.gray-bg {
+  background: var(--gray);
+}
+
+.darkblue-bg {
+  background: var(--darkblue);
+}
+
+.shadow-white {
+  text-shadow: 1px 1px 10px var(--white);
+}
+.shadow-black {
+  text-shadow: 1px 1px 10px var(--black);
+}
+
+.shadow-gray {
+  text-shadow: 1px 1px 10px var(--gray);
+}
+
+@media screen and (max-width: 900px) {
+  :root {
+    --mainPadding: 0 4.5rem;
+    --mainMarginLeft: 4.5rem;
+  }
+  h1 {
+    font-size: 10rem;
+    line-height: 7rem;
+  }
+  h2 {
+    font-size: 7rem;
+    line-height: 6.5rem;
+  }
+
+  h3 {
+    font-size: 3.5rem;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+    line-height: 1.5rem;
+  }
+
+  h5 {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  :root {
+    --mainPadding: 0 2rem;
+    --mainMarginLeft: 2rem;
+  }
+
+  h1 {
+    font-size: 8rem;
+    line-height: 5.5rem;
+  }
+  h2 {
+    font-size: 3.5rem;
+    line-height: 3rem;
+  }
+
+  h3 {
+    font-size: 2.8rem;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+}
